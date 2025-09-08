@@ -21,10 +21,11 @@ configurations {
 }
 
 repositories {
-	mavenCentral()
+	mavenCentral() // Maven Central 리포지토리 추가
 }
 
 dependencies {
+	// Spring Boot 의존성
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -32,16 +33,76 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 	implementation 'org.springframework.security:spring-security-oauth2-client'
+
+	// Lombok (컴파일 시에만 필요)
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// MySQL 커넥터
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	// JWT 라이브러리 추가
+	implementation 'io.jsonwebtoken:jjwt:0.11.5'  // 최신 버전 사용
+
+	// 테스트 의존성
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
-
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+
+
+
+
+
+//plugins {
+//	id 'java'
+//	id 'org.springframework.boot' version '3.5.5'
+//	id 'io.spring.dependency-management' version '1.1.7'
+//}
+//
+//group = 'com.my'
+//version = '0.0.1-SNAPSHOT'
+//description = 'Demo project for Spring Boot'
+//
+//java {
+//	toolchain {
+//		languageVersion = JavaLanguageVersion.of(17)
+//	}
+//}
+//
+//configurations {
+//	compileOnly {
+//		extendsFrom annotationProcessor
+//	}
+//}
+//
+//repositories {
+//	mavenCentral()
+//}
+//
+//dependencies {
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+//	implementation 'org.springframework.boot:spring-boot-starter-validation'
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+//	implementation 'org.springframework.security:spring-security-oauth2-client'
+//	compileOnly 'org.projectlombok:lombok'
+//	runtimeOnly 'com.mysql:mysql-connector-j'
+//	annotationProcessor 'org.projectlombok:lombok'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	testImplementation 'org.springframework.security:spring-security-test'
+//	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//
+//
+//}
+//
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}

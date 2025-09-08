@@ -26,6 +26,38 @@ logging:
     org.hibernate.SQL: debug
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
+# JWT 설정 추가
+jwt:
+  secret: your-secret-key  # JWT 토큰을 서명할 비밀 키
+  expiration: 86400000     # JWT 토큰 만료 시간 (1일 = 86400000 밀리초)
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/touristAttraction_db?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+#    username: ${DB_USER}
+#    password: ${DB_PW}
+#
+#  sql:
+#    init:
+#      mode: never
+#
+#  jpa:
+#    open-in-view: false   # 성능 + Lazy 로딩 문제 방지 권장
+#    hibernate:
+#      ddl-auto: create    # 개발 중에는 update, 운영에서는 validate 또는 none
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+#        show_sql: true
+#        format_sql: true
+#        use_sql_comments: true
+#
+#logging:
+#  level:
+#    org.hibernate.SQL: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
 #spring:
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver

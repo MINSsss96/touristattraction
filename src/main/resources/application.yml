@@ -1,18 +1,45 @@
-#MySQL 셋팅
+##MySQL 셋팅
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/board
+    url: jdbc:mysql://localhost:3306/touristAttraction_db?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: ${DB_USER}
     password: ${DB_PW}
+
   sql:
     init:
-      mode: NEVER
+      mode: never
+
   jpa:
-    defer-datasource-initialization: false
+    open-in-view: false   # 성능 + Lazy 로딩 문제 방지 권장
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create    # 개발 중에는 update, 운영에서는 validate 또는 none
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
         show_sql: true
         format_sql: true
+        use_sql_comments: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/touristAttraction_db
+#    username: ${DB_USER}
+#    password: ${DB_PW}
+#  sql:
+#    init:
+#      mode: NEVER
+#  jpa:
+#    defer-datasource-initialization: false
+#    hibernate:
+#      ddl-auto: validate
+#    properties:
+#      hibernate:
+#        show_sql: true
+#        format_sql: true

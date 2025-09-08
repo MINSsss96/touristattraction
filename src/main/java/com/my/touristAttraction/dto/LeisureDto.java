@@ -1,8 +1,12 @@
 package com.my.touristAttraction.dto;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class LeisureDto {
     private Long id;
     private String name;

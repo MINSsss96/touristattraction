@@ -19,9 +19,9 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if(userRepository.findByUsername("admin").isEmpty()) {
             User admin = User.builder()
-                    .username("admin")
+                    .uid("admin")
                     .password(passwordEncoder.encode("1111"))
-                    .name("관리자")
+                    .username("관리자")
                     .email("admin@example.com")
                     //.roles(Set.of("ROLE_ADMIN","ROLE_USER"))
                     .roles(Set.of("ROLE_ADMIN"))
@@ -33,9 +33,9 @@ public class DataInitializer implements CommandLineRunner {
         // 일반 유저 계정
         if(userRepository.findByUsername("user").isEmpty()) {
             User user = User.builder()
-                    .username("user")
+                    .uid("user")
                     .password(passwordEncoder.encode("1234"))
-                    .name("일반유저")
+                    .username("일반유저")
                     .email("user@example.com")
                     .roles(Set.of("ROLE_USER"))  // 일반 유저니까 ROLE_USER만
                     .enabled(true)

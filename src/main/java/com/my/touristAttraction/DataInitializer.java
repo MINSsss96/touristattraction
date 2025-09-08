@@ -1,7 +1,7 @@
 package com.my.touristAttraction;
 
-import com.my.watermelon.entity.User;
-import com.my.watermelon.repository.UserRepository;
+import com.my.touristAttraction.entity.User;
+import com.my.touristAttraction.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,6 +1,6 @@
 package com.my.touristAttraction.dto;
 
-import com.my.watermelon.entity.CommentEntity;
+import com.my.touristAttraction.entity.CommentEntity;
 import lombok.*;
 
 import java.time.LocalDateTime;

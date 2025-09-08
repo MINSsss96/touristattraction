@@ -1,6 +1,6 @@
 package com.my.touristAttraction.repository;
 
-import com.my.watermelon.entity.Notice;
+import com.my.touristAttraction.entity.Notice;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,8 +1,8 @@
 package com.my.touristAttraction.controller;
 
 
-import com.my.watermelon.dto.CommentDto;
-import com.my.watermelon.service.CommentService;
+import com.my.touristAttraction.dto.CommentDto;
+import com.my.touristAttraction.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

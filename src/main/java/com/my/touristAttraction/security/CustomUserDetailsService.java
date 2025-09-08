@@ -1,7 +1,7 @@
 package com.my.touristAttraction.security;
 
-import com.my.watermelon.entity.User;
-import com.my.watermelon.repository.UserRepository;
+import com.my.touristAttraction.entity.User;
+import com.my.touristAttraction.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

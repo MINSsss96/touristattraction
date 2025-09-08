@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -18,25 +19,33 @@ public class User {
     private Long id;
 
     @Column(unique = true, nullable = false)
-    private String username; // 로그인 id
+    private String uid;
 
     @Column(nullable = false)
     private String password;
 
-    private String name;
-    private String email;
-    private String phone;
+    private String username;
+    private String address;
     private String nickname;
+    private String email;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role")
     private Set<String> roles;
+    private boolean enabled = true;
 
-    private boolean enabled = true; // 정지 여부 처리
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Notice> notices;
 
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CommentEntity> comments;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Like> likes;
 
     @PrePersist
     public void prePersist() {

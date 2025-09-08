@@ -1,8 +1,8 @@
 package com.my.touristAttraction.service;
 
-import com.my.watermelon.dto.UserAdminDto;
-import com.my.watermelon.entity.User;
-import com.my.watermelon.repository.UserRepository;
+import com.my.touristAttraction.dto.UserAdminDto;
+import com.my.touristAttraction.entity.User;
+import com.my.touristAttraction.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

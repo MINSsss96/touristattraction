@@ -1,10 +1,10 @@
 package com.my.touristAttraction.service;
 
-import com.my.watermelon.dto.NoticeDto;
-import com.my.watermelon.entity.Notice;
-import com.my.watermelon.entity.User;
-import com.my.watermelon.repository.NoticeRepository;
-import com.my.watermelon.repository.UserRepository;
+import com.my.touristAttraction.dto.NoticeDto;
+import com.my.touristAttraction.entity.Notice;
+import com.my.touristAttraction.entity.User;
+import com.my.touristAttraction.repository.NoticeRepository;
+import com.my.touristAttraction.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

@@ -1,10 +1,10 @@
 package com.my.touristAttraction.controller;
 
-import com.my.watermelon.dto.NoticeDto;
-import com.my.watermelon.dto.UserAdminDto;
-import com.my.watermelon.entity.Notice;
-import com.my.watermelon.service.NoticeService;
-import com.my.watermelon.service.UserService;
+import com.my.touristAttraction.dto.NoticeDto;
+import com.my.touristAttraction.dto.UserAdminDto;
+import com.my.touristAttraction.entity.Notice;
+import com.my.touristAttraction.service.NoticeService;
+import com.my.touristAttraction.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

@@ -1,6 +1,6 @@
 package com.my.touristAttraction.repository;
 
-import com.my.watermelon.entity.User;
+import com.my.touristAttraction.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

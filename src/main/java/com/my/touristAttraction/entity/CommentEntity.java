@@ -19,9 +19,9 @@ public class CommentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "song_id", nullable = false)
-    private SongEntity song;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "song_id", nullable = false)
+//    private SongEntity song;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)

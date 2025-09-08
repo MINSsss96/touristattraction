@@ -1,6 +1,6 @@
 package com.my.touristAttraction.repository;
 
-import com.my.watermelon.entity.CommentEntity;
+import com.my.touristAttraction.entity.CommentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

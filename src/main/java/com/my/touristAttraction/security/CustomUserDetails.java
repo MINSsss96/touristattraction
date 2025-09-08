@@ -1,6 +1,6 @@
 package com.my.touristAttraction.security;
 
-import com.my.watermelon.entity.User;
+import com.my.touristAttraction.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 public class CustomUserDetails implements UserDetails {
-    private final com.my.watermelon.entity.User user;
+    private final com.my.touristAttraction.entity.User user;
     public CustomUserDetails(User user) { this.user = user; }
 
     @Override
